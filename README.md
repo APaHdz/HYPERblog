@@ -8,5 +8,7 @@ En este curso he aprendido :
 > -  Algunos comandos de git y github.
 > - El flujo de trabajo de github.
 >- Las buenas practicas dentro del flujo de trabajo.
+>- Y Mucho mas. Solo es cuesion de practicar y darle seguimiento a los videos
+
 
 Aún  hay un largo camino que recorrer y este es un gran  inicio. 👨‍💻
