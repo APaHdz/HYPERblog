@@ -10,5 +10,6 @@ En este curso he aprendido :
 >- Las buenas practicas dentro del flujo de trabajo.
 >- Y Mucho mas. Solo es cuesion de practicar y darle seguimiento a los videos
 
+disponible en platzi.com
 
 Aún  hay un largo camino que recorrer y este es un gran  inicio. 👨‍💻
