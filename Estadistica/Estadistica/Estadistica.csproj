@@ -1,0 +1,1120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0AD0E4BC-07F0-4C71-B0A1-E1EEAE03FC11}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Estadistica</RootNamespace>
+    <AssemblyName>Estadistica</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>ada68f43</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Statistics_27003.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>.\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelDataReader">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.8.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Windows.1.8.5\lib\net40\GMap.NET.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.8.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Windows.1.8.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation, Version=1.8.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Windows.1.8.5\lib\net40\GMap.NET.WindowsPresentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Procest\Procest\bin\Debug\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.108.0\lib\net45\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.108.0\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.108.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.108.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClasesEstadistica.cs" />
+    <Compile Include="ExcelEstadistica.cs" />
+    <Compile Include="Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\American Express\frmListaNegraCorreos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\American Express\frmListaNegraCorreos.Designer.cs">
+      <DependentUpon>frmListaNegraCorreos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\American Express\frmCargaAsigVisitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\American Express\frmCargaAsigVisitas.Designer.cs">
+      <DependentUpon>frmCargaAsigVisitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\American Express\frmCargaFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\American Express\frmCargaFacturas.Designer.cs">
+      <DependentUpon>frmCargaFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmAsignaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmAsignaciones.designer.cs">
+      <DependentUpon>frmAsignaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmCarga_ArchivosRiesgo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmCarga_ArchivosRiesgo.designer.cs">
+      <DependentUpon>frmCarga_ArchivosRiesgo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmFolios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmFolios.designer.cs">
+      <DependentUpon>frmFolios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmMetasSCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmMetasSCV.Designer.cs">
+      <DependentUpon>frmMetasSCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmBBVACarteo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmBBVACarteo.designer.cs">
+      <DependentUpon>frmBBVACarteo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmVinculacionRespuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmVinculacionRespuesta.Designer.cs">
+      <DependentUpon>frmVinculacionRespuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmIrene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmIrene.Designer.cs">
+      <DependentUpon>frmIrene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmVisitasMapeo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmVisitasMapeo.Designer.cs">
+      <DependentUpon>frmVisitasMapeo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmIreneIVR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmIreneIVR.Designer.cs">
+      <DependentUpon>frmIreneIVR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmIVR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmIVR.Designer.cs">
+      <DependentUpon>frmIVR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmIreneCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmIreneCuentas.Designer.cs">
+      <DependentUpon>frmIreneCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Banorte\frmPlantillaPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Banorte\frmPlantillaPersonal.Designer.cs">
+      <DependentUpon>frmPlantillaPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmMetasAsesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmMetasAsesor.Designer.cs">
+      <DependentUpon>frmMetasAsesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmRmtsSuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmRmtsSuc.Designer.cs">
+      <DependentUpon>frmRmtsSuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmCorteCierre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmCorteCierre.Designer.cs">
+      <DependentUpon>frmCorteCierre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmNegociaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmNegociaciones.Designer.cs">
+      <DependentUpon>frmNegociaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmSummary.Designer.cs">
+      <DependentUpon>frmSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmRemesaPyme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmRemesaPyme.Designer.cs">
+      <DependentUpon>frmRemesaPyme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\CityBanamex\frmAsistencia.Designer.cs">
+      <DependentUpon>frmAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Daimler\frmExtraeTelMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Daimler\frmExtraeTelMail.Designer.cs">
+      <DependentUpon>frmExtraeTelMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Daimler\frmCargaAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Daimler\frmCargaAsistencia.Designer.cs">
+      <DependentUpon>frmCargaAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Daimler\frmCargaEficiencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Daimler\frmCargaEficiencia.Designer.cs">
+      <DependentUpon>frmCargaEficiencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Daimler\frmCargaSaldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Daimler\frmCargaSaldos.Designer.cs">
+      <DependentUpon>frmCargaSaldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Daimler\frmCargaInbound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Daimler\frmCargaInbound.Designer.cs">
+      <DependentUpon>frmCargaInbound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Daimler\frmCargaGestiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Daimler\frmCargaGestiones.Designer.cs">
+      <DependentUpon>frmCargaGestiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Inbursa\frmLimpia_Archivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Inbursa\frmLimpia_Archivo.Designer.cs">
+      <DependentUpon>frmLimpia_Archivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Inbursa\frmValidacionDomicilios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Inbursa\frmValidacionDomicilios.Designer.cs">
+      <DependentUpon>frmValidacionDomicilios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Libertad\frmAsignaciónLibertad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Libertad\frmAsignaciónLibertad.Designer.cs">
+      <DependentUpon>frmAsignaciónLibertad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Nissan\frmDaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Nissan\frmDaciones.Designer.cs">
+      <DependentUpon>frmDaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Nissan\frmCentroAcopio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Nissan\frmCentroAcopio.Designer.cs">
+      <DependentUpon>frmCentroAcopio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Nissan\frmValidacionDomiciliosNissan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Nissan\frmValidacionDomiciliosNissan.Designer.cs">
+      <DependentUpon>frmValidacionDomiciliosNissan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Santander\frmMejorContactoFallido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Santander\frmMejorContactoFallido.Designer.cs">
+      <DependentUpon>frmMejorContactoFallido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Santander\frmCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Santander\frmCalendario.Designer.cs">
+      <DependentUpon>frmCalendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Santander\frmAsignacionTDCGraciaEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Santander\frmAsignacionTDCGraciaEntradas.Designer.cs">
+      <DependentUpon>frmAsignacionTDCGraciaEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Santander\frmAsignacionTDCGracia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Santander\frmAsignacionTDCGracia.Designer.cs">
+      <DependentUpon>frmAsignacionTDCGracia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Santander\frmDesasignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Santander\frmDesasignacion.Designer.cs">
+      <DependentUpon>frmDesasignacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Soriana\frmFallabelaAccionamientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Soriana\frmFallabelaAccionamientos.Designer.cs">
+      <DependentUpon>frmFallabelaAccionamientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Soriana\frmFallabelaIntentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Soriana\frmFallabelaIntentos.Designer.cs">
+      <DependentUpon>frmFallabelaIntentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Soriana\frmFallabelaGestiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Soriana\frmFallabelaGestiones.Designer.cs">
+      <DependentUpon>frmFallabelaGestiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmBarridoPagosPrelegal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmBarridoPagosPrelegal.Designer.cs">
+      <DependentUpon>frmBarridoPagosPrelegal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmBarridoPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmBarridoPagos.Designer.cs">
+      <DependentUpon>frmBarridoPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmConciliaciónTelBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmConciliaciónTelBank.Designer.cs">
+      <DependentUpon>frmConciliaciónTelBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmFBL5Leasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmFBL5Leasing.Designer.cs">
+      <DependentUpon>frmFBL5Leasing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmPagosTelBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmPagosTelBank.Designer.cs">
+      <DependentUpon>frmPagosTelBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmReporteConciliacionTelBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmReporteConciliacionTelBank.designer.cs">
+      <DependentUpon>frmReporteConciliacionTelBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmSegurosLeasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmSegurosLeasing.Designer.cs">
+      <DependentUpon>frmSegurosLeasing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmConciliaciónPrelegal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmConciliaciónPrelegal.Designer.cs">
+      <DependentUpon>frmConciliaciónPrelegal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmPagosPrelegal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmPagosPrelegal.Designer.cs">
+      <DependentUpon>frmPagosPrelegal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmReporteConciliacionPrelegal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmReporteConciliacionPrelegal.designer.cs">
+      <DependentUpon>frmReporteConciliacionPrelegal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmPaqueteDomicilios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmPaqueteDomicilios.designer.cs">
+      <DependentUpon>frmPaqueteDomicilios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmAnalisisCartera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmAnalisisCartera.designer.cs">
+      <DependentUpon>frmAnalisisCartera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmTelefonosCarterasConContacto - Copy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmTelefonosCarterasConContacto - Copy.designer.cs">
+      <DependentUpon>frmTelefonosCarterasConContacto - Copy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmEstudioCartera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmEstudioCartera.designer.cs">
+      <DependentUpon>frmEstudioCartera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmMax_Min.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmMax_Min.designer.cs">
+      <DependentUpon>frmMax_Min.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmTelefonosContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmTelefonosContacto.designer.cs">
+      <DependentUpon>frmTelefonosContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmTelefonosAsignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmTelefonosAsignacion.designer.cs">
+      <DependentUpon>frmTelefonosAsignacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmDetalleAsignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmDetalleAsignacion.designer.cs">
+      <DependentUpon>frmDetalleAsignacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmMovimientoAsignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmMovimientoAsignacion.designer.cs">
+      <DependentUpon>frmMovimientoAsignacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmBotonera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\2 Reportes\frmBotonera.designer.cs">
+      <DependentUpon>frmBotonera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmGenero.designer.cs">
+      <DependentUpon>frmGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmAsignacionesEstadistica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmAsignacionesEstadistica.Designer.cs">
+      <DependentUpon>frmAsignacionesEstadistica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmCargaConjurnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmCargaConjurnet.designer.cs">
+      <DependentUpon>frmCargaConjurnet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmCargaConjurnetAsignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmCargaConjurnetAsignacion.designer.cs">
+      <DependentUpon>frmCargaConjurnetAsignacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmCargaConjurnetNeg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmCargaConjurnetNeg.designer.cs">
+      <DependentUpon>frmCargaConjurnetNeg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmConjurnetPagosbmx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmConjurnetPagosbmx.Designer.cs">
+      <DependentUpon>frmConjurnetPagosbmx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmEmail.Designer.cs">
+      <DependentUpon>frmEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmReporteIngresoConjurnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmReporteIngresoConjurnet.designer.cs">
+      <DependentUpon>frmReporteIngresoConjurnet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmPersonalCJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmPersonalCJ.Designer.cs">
+      <DependentUpon>frmPersonalCJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmSMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmSMS.Designer.cs">
+      <DependentUpon>frmSMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmContactoRecuperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmContactoRecuperacion.designer.cs">
+      <DependentUpon>frmContactoRecuperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmDictamen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmDictamen.Designer.cs">
+      <DependentUpon>frmDictamen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmMetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmMetas.designer.cs">
+      <DependentUpon>frmMetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmIntentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmIntentos.designer.cs">
+      <DependentUpon>frmIntentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmBlaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmBlaster.Designer.cs">
+      <DependentUpon>frmBlaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmRutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmRutas.Designer.cs">
+      <DependentUpon>frmRutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmMapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmMapa.Designer.cs">
+      <DependentUpon>frmMapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmMarcarCJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmMarcarCJ.Designer.cs">
+      <DependentUpon>frmMarcarCJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmRetirosCJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmRetirosCJ.Designer.cs">
+      <DependentUpon>frmRetirosCJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmGeolocalizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmGeolocalizacion.Designer.cs">
+      <DependentUpon>frmGeolocalizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmAsignacionesCJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmAsignacionesCJ.Designer.cs">
+      <DependentUpon>frmAsignacionesCJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmPagosCJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmPagosCJ.Designer.cs">
+      <DependentUpon>frmPagosCJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmPagosLeasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmPagosLeasing.Designer.cs">
+      <DependentUpon>frmPagosLeasing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmConciliaciónLeasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmConciliaciónLeasing.Designer.cs">
+      <DependentUpon>frmConciliaciónLeasing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmReporteConciliacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Volkswagen\frmReporteConciliacion.designer.cs">
+      <DependentUpon>frmReporteConciliacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmDomicilios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmDomicilios.Designer.cs">
+      <DependentUpon>frmDomicilios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\5 Score\frmAnalisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\5 Score\frmAnalisis.designer.cs">
+      <DependentUpon>frmAnalisis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmCarga_ArchivosRiesgoBanorte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmCarga_ArchivosRiesgoBanorte.designer.cs">
+      <DependentUpon>frmCarga_ArchivosRiesgoBanorte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmDirecFacLeas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmDirecFacLeas.designer.cs">
+      <DependentUpon>frmDirecFacLeas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmPortFacLeas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmPortFacLeas.designer.cs">
+      <DependentUpon>frmPortFacLeas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmRepFacLeasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmRepFacLeasing.designer.cs">
+      <DependentUpon>frmRepFacLeasing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmTelecom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmTelecom.designer.cs" />
+    <Compile Include="Forms\Menú\6 Riesgos\frmvwfac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmvwfac.designer.cs">
+      <DependentUpon>frmvwfac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmRetenciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmRetenciones.designer.cs">
+      <DependentUpon>frmRetenciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\6 Riesgos\frmScore.designer.cs">
+      <DependentUpon>frmScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportesAlCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportesAlCliente.designer.cs">
+      <DependentUpon>frmReportesAlCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmTablasTemporales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\3 Estadistica\frmTablasTemporales.Designer.cs">
+      <DependentUpon>frmTablasTemporales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmAvances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\1 Clientes\Bancomer\frmAvances.Designer.cs">
+      <DependentUpon>frmAvances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\4 Facturacion\frmAranceles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\4 Facturacion\frmAranceles.Designer.cs">
+      <DependentUpon>frmAranceles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\4 Facturacion\frmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\4 Facturacion\frmFactura.designer.cs">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menú\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menú\frmMenu.designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainEstadistica.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\American Express\frmListaNegraCorreos.resx">
+      <DependentUpon>frmListaNegraCorreos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\American Express\frmCargaAsigVisitas.resx">
+      <DependentUpon>frmCargaAsigVisitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\American Express\frmCargaFacturas.resx">
+      <DependentUpon>frmCargaFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Bancomer\frmAsignaciones.resx">
+      <DependentUpon>frmAsignaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Bancomer\frmCarga_ArchivosRiesgo.resx">
+      <DependentUpon>frmCarga_ArchivosRiesgo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Bancomer\frmFolios.resx">
+      <DependentUpon>frmFolios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Bancomer\frmMetasSCV.resx">
+      <DependentUpon>frmMetasSCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Bancomer\frmBBVACarteo.resx">
+      <DependentUpon>frmBBVACarteo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Bancomer\frmVinculacionRespuesta.resx">
+      <DependentUpon>frmVinculacionRespuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Bancomer\frmIrene.resx">
+      <DependentUpon>frmIrene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Bancomer\frmVisitasMapeo.resx">
+      <DependentUpon>frmVisitasMapeo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Bancomer\frmIreneIVR.resx">
+      <DependentUpon>frmIreneIVR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Bancomer\frmIVR.resx">
+      <DependentUpon>frmIVR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Bancomer\frmIreneCuentas.resx">
+      <DependentUpon>frmIreneCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Banorte\frmPlantillaPersonal.resx">
+      <DependentUpon>frmPlantillaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\CityBanamex\frmMetasAsesor.resx">
+      <DependentUpon>frmMetasAsesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\CityBanamex\frmRmtsSuc.resx">
+      <DependentUpon>frmRmtsSuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\CityBanamex\frmCorteCierre.resx">
+      <DependentUpon>frmCorteCierre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\CityBanamex\frmNegociaciones.resx">
+      <DependentUpon>frmNegociaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\CityBanamex\frmSummary.resx">
+      <DependentUpon>frmSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\CityBanamex\frmRemesaPyme.resx">
+      <DependentUpon>frmRemesaPyme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\CityBanamex\frmAsistencia.resx">
+      <DependentUpon>frmAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Daimler\frmExtraeTelMail.resx">
+      <DependentUpon>frmExtraeTelMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Daimler\frmCargaAsistencia.resx">
+      <DependentUpon>frmCargaAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Daimler\frmCargaEficiencia.resx">
+      <DependentUpon>frmCargaEficiencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Daimler\frmCargaSaldos.resx">
+      <DependentUpon>frmCargaSaldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Daimler\frmCargaInbound.resx">
+      <DependentUpon>frmCargaInbound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Daimler\frmCargaGestiones.resx">
+      <DependentUpon>frmCargaGestiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Inbursa\frmLimpia_Archivo.resx">
+      <DependentUpon>frmLimpia_Archivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Inbursa\frmValidacionDomicilios.resx">
+      <DependentUpon>frmValidacionDomicilios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Libertad\frmAsignaciónLibertad.resx">
+      <DependentUpon>frmAsignaciónLibertad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Nissan\frmDaciones.resx">
+      <DependentUpon>frmDaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Nissan\frmCentroAcopio.resx">
+      <DependentUpon>frmCentroAcopio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Nissan\frmValidacionDomiciliosNissan.resx">
+      <DependentUpon>frmValidacionDomiciliosNissan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Santander\frmMejorContactoFallido.resx">
+      <DependentUpon>frmMejorContactoFallido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Santander\frmCalendario.resx">
+      <DependentUpon>frmCalendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Santander\frmAsignacionTDCGraciaEntradas.resx">
+      <DependentUpon>frmAsignacionTDCGraciaEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Santander\frmAsignacionTDCGracia.resx">
+      <DependentUpon>frmAsignacionTDCGracia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Santander\frmDesasignacion.resx">
+      <DependentUpon>frmDesasignacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Soriana\frmFallabelaAccionamientos.resx">
+      <DependentUpon>frmFallabelaAccionamientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Soriana\frmFallabelaIntentos.resx">
+      <DependentUpon>frmFallabelaIntentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Soriana\frmFallabelaGestiones.resx">
+      <DependentUpon>frmFallabelaGestiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Volkswagen\frmBarridoPagosPrelegal.resx">
+      <DependentUpon>frmBarridoPagosPrelegal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Volkswagen\frmBarridoPagos.resx">
+      <DependentUpon>frmBarridoPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Volkswagen\frmConciliaciónTelBank.resx">
+      <DependentUpon>frmConciliaciónTelBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Volkswagen\frmFBL5Leasing.resx">
+      <DependentUpon>frmFBL5Leasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Volkswagen\frmPagosTelBank.resx">
+      <DependentUpon>frmPagosTelBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Volkswagen\frmReporteConciliacionTelBank.resx">
+      <DependentUpon>frmReporteConciliacionTelBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Volkswagen\frmSegurosLeasing.resx">
+      <DependentUpon>frmSegurosLeasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Volkswagen\frmConciliaciónPrelegal.resx">
+      <DependentUpon>frmConciliaciónPrelegal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Volkswagen\frmPagosPrelegal.resx">
+      <DependentUpon>frmPagosPrelegal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Volkswagen\frmReporteConciliacionPrelegal.resx">
+      <DependentUpon>frmReporteConciliacionPrelegal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\2 Reportes\frmPaqueteDomicilios.resx">
+      <DependentUpon>frmPaqueteDomicilios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\2 Reportes\frmAnalisisCartera.resx">
+      <DependentUpon>frmAnalisisCartera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\2 Reportes\frmTelefonosCarterasConContacto - Copy.resx">
+      <DependentUpon>frmTelefonosCarterasConContacto - Copy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\2 Reportes\frmEstudioCartera.resx">
+      <DependentUpon>frmEstudioCartera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\2 Reportes\frmMax_Min.resx">
+      <DependentUpon>frmMax_Min.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\2 Reportes\frmTelefonosContacto.resx">
+      <DependentUpon>frmTelefonosContacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\2 Reportes\frmTelefonosAsignacion.resx">
+      <DependentUpon>frmTelefonosAsignacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\2 Reportes\frmDetalleAsignacion.resx">
+      <DependentUpon>frmDetalleAsignacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\2 Reportes\frmMovimientoAsignacion.resx">
+      <DependentUpon>frmMovimientoAsignacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\2 Reportes\frmBotonera.resx">
+      <DependentUpon>frmBotonera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmGenero.resx">
+      <DependentUpon>frmGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmAsignacionesEstadistica.resx">
+      <DependentUpon>frmAsignacionesEstadistica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmCargaConjurnet.resx">
+      <DependentUpon>frmCargaConjurnet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmCargaConjurnetAsignacion.resx">
+      <DependentUpon>frmCargaConjurnetAsignacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmCargaConjurnetNeg.resx">
+      <DependentUpon>frmCargaConjurnetNeg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmConjurnetPagosbmx.resx">
+      <DependentUpon>frmConjurnetPagosbmx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmEmail.resx">
+      <DependentUpon>frmEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmReporteIngresoConjurnet.resx">
+      <DependentUpon>frmReporteIngresoConjurnet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmPersonalCJ.resx">
+      <DependentUpon>frmPersonalCJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmSMS.resx">
+      <DependentUpon>frmSMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmContactoRecuperacion.resx">
+      <DependentUpon>frmContactoRecuperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmDictamen.resx">
+      <DependentUpon>frmDictamen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmMetas.resx">
+      <DependentUpon>frmMetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmIntentos.resx">
+      <DependentUpon>frmIntentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmBlaster.resx">
+      <DependentUpon>frmBlaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmRutas.resx">
+      <DependentUpon>frmRutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmMapa.resx">
+      <DependentUpon>frmMapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmMarcarCJ.resx">
+      <DependentUpon>frmMarcarCJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmRetirosCJ.resx">
+      <DependentUpon>frmRetirosCJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmGeolocalizacion.resx">
+      <DependentUpon>frmGeolocalizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmAsignacionesCJ.resx">
+      <DependentUpon>frmAsignacionesCJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmPagosCJ.resx">
+      <DependentUpon>frmPagosCJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Volkswagen\frmPagosLeasing.resx">
+      <DependentUpon>frmPagosLeasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Volkswagen\frmConciliaciónLeasing.resx">
+      <DependentUpon>frmConciliaciónLeasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Volkswagen\frmReporteConciliacion.resx">
+      <DependentUpon>frmReporteConciliacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmDomicilios.resx">
+      <DependentUpon>frmDomicilios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\5 Score\frmAnalisis.resx">
+      <DependentUpon>frmAnalisis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\6 Riesgos\frmCarga_ArchivosRiesgoBanorte.resx">
+      <DependentUpon>frmCarga_ArchivosRiesgoBanorte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\6 Riesgos\frmDirecFacLeas.resx">
+      <DependentUpon>frmDirecFacLeas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\6 Riesgos\frmPortFacLeas.resx">
+      <DependentUpon>frmPortFacLeas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\6 Riesgos\frmRepFacLeasing.resx">
+      <DependentUpon>frmRepFacLeasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\6 Riesgos\frmTelecom.resx" />
+    <EmbeddedResource Include="Forms\Menú\6 Riesgos\frmvwfac.resx">
+      <DependentUpon>frmvwfac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\6 Riesgos\frmRetenciones.resx">
+      <DependentUpon>frmRetenciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\6 Riesgos\frmScore.resx">
+      <DependentUpon>frmScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportesAlCliente.resx">
+      <DependentUpon>frmReportesAlCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\3 Estadistica\frmTablasTemporales.resx">
+      <DependentUpon>frmTablasTemporales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\1 Clientes\Bancomer\frmAvances.resx">
+      <DependentUpon>frmAvances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\4 Facturacion\frmAranceles.resx">
+      <DependentUpon>frmAranceles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\4 Facturacion\frmFactura.resx">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menú\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="8_icon-icons.com_67660.ico" />
+    <Content Include="Icons\Estadistica.ico" />
+    <Content Include="Statistics_27003.ico" />
+    <EmbeddedResource Include="mapa.html">
+      <CustomToolNamespace>Estadistica</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Pictures\Add_26.png" />
+    <Content Include="Pictures\Autorizado.jpg" />
+    <Content Include="Pictures\Cancelado.jpg" />
+    <Content Include="Pictures\Cerrado.jpg" />
+    <Content Include="Pictures\CJ logo.png" />
+    <Content Include="Pictures\Clean_26.png" />
+    <Content Include="Pictures\Colores Puntos.png" />
+    <Content Include="Pictures\Comprobar.jpg" />
+    <Content Include="Pictures\ConsorcioLetras.png" />
+    <Content Include="Pictures\ConsorcioLetras_OLD.png" />
+    <Content Include="Pictures\Cross_26.png" />
+    <Content Include="Pictures\Devuelto.jpg" />
+    <Content Include="Pictures\devuelto.png" />
+    <Content Include="Pictures\NoAplica.jpg" />
+    <None Include="Pictures\success.png" />
+    <Content Include="Pictures\Trash_26.png" />
+    <Content Include="Pictures\Wait_flower.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Maps\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.108.0\build\net45\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

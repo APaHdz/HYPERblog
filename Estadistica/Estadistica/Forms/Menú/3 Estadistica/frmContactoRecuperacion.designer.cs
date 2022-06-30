@@ -1,0 +1,188 @@
+﻿namespace Estadistica
+{
+    partial class frmContactoRecuperacion
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmContactoRecuperacion));
+            this.lblFinal = new System.Windows.Forms.Label();
+            this.dtpFinal = new System.Windows.Forms.DateTimePicker();
+            this.btnConsulta = new System.Windows.Forms.Button();
+            this.lblMensajes = new System.Windows.Forms.Label();
+            this.picWait = new System.Windows.Forms.PictureBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.sfdExcel = new System.Windows.Forms.SaveFileDialog();
+            this.cmbCarteras = new System.Windows.Forms.ComboBox();
+            this.lblServidor = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picWait)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // lblFinal
+            // 
+            this.lblFinal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblFinal.AutoSize = true;
+            this.lblFinal.Location = new System.Drawing.Point(5, 136);
+            this.lblFinal.Name = "lblFinal";
+            this.lblFinal.Size = new System.Drawing.Size(71, 16);
+            this.lblFinal.TabIndex = 146;
+            this.lblFinal.Text = "Fecha Final";
+            // 
+            // dtpFinal
+            // 
+            this.dtpFinal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFinal.Location = new System.Drawing.Point(85, 129);
+            this.dtpFinal.Name = "dtpFinal";
+            this.dtpFinal.Size = new System.Drawing.Size(118, 26);
+            this.dtpFinal.TabIndex = 147;
+            // 
+            // btnConsulta
+            // 
+            this.btnConsulta.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnConsulta.BackColor = System.Drawing.Color.SlateGray;
+            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsulta.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsulta.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnConsulta.Location = new System.Drawing.Point(92, 175);
+            this.btnConsulta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(111, 27);
+            this.btnConsulta.TabIndex = 197;
+            this.btnConsulta.Text = "Iniciar";
+            this.btnConsulta.UseVisualStyleBackColor = false;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
+            // lblMensajes
+            // 
+            this.lblMensajes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMensajes.BackColor = System.Drawing.Color.White;
+            this.lblMensajes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblMensajes.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F);
+            this.lblMensajes.ForeColor = System.Drawing.Color.SlateGray;
+            this.lblMensajes.Location = new System.Drawing.Point(12, 219);
+            this.lblMensajes.Name = "lblMensajes";
+            this.lblMensajes.Size = new System.Drawing.Size(190, 42);
+            this.lblMensajes.TabIndex = 195;
+            this.lblMensajes.Text = "Selecciona un intervalo y da click en Iniciar";
+            this.lblMensajes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // picWait
+            // 
+            this.picWait.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.picWait.BackColor = System.Drawing.Color.Transparent;
+            this.picWait.Image = global::Estadistica.Properties.Resources.Wait_flower;
+            this.picWait.Location = new System.Drawing.Point(130, 175);
+            this.picWait.Name = "picWait";
+            this.picWait.Size = new System.Drawing.Size(32, 32);
+            this.picWait.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picWait.TabIndex = 196;
+            this.picWait.TabStop = false;
+            this.picWait.Visible = false;
+            // 
+            // picLogo
+            // 
+            this.picLogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.picLogo.Image = global::Estadistica.Properties.Resources.ConsorcioLetras;
+            this.picLogo.Location = new System.Drawing.Point(8, 12);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(195, 62);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 143;
+            this.picLogo.TabStop = false;
+            // 
+            // sfdExcel
+            // 
+            this.sfdExcel.DefaultExt = "xlsx";
+            this.sfdExcel.Filter = "Libro de Excel (*.xls, *.xlsx)|*.xls;*.xlsx";
+            this.sfdExcel.Title = "Guardar libro de Excel";
+            // 
+            // cmbCarteras
+            // 
+            this.cmbCarteras.FormattingEnabled = true;
+            this.cmbCarteras.Location = new System.Drawing.Point(85, 90);
+            this.cmbCarteras.Name = "cmbCarteras";
+            this.cmbCarteras.Size = new System.Drawing.Size(118, 24);
+            this.cmbCarteras.TabIndex = 198;
+            // 
+            // lblServidor
+            // 
+            this.lblServidor.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblServidor.AutoSize = true;
+            this.lblServidor.Location = new System.Drawing.Point(5, 98);
+            this.lblServidor.Name = "lblServidor";
+            this.lblServidor.Size = new System.Drawing.Size(55, 16);
+            this.lblServidor.TabIndex = 199;
+            this.lblServidor.Text = "Servidor";
+            // 
+            // frmContactoRecuperacion
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(214, 270);
+            this.Controls.Add(this.lblServidor);
+            this.Controls.Add(this.cmbCarteras);
+            this.Controls.Add(this.btnConsulta);
+            this.Controls.Add(this.picWait);
+            this.Controls.Add(this.lblMensajes);
+            this.Controls.Add(this.lblFinal);
+            this.Controls.Add(this.dtpFinal);
+            this.Controls.Add(this.picLogo);
+            this.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F);
+            this.ForeColor = System.Drawing.Color.DimGray;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmContactoRecuperacion";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Contacto Recuperación - Estadística";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmBotonera_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.picWait)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Label lblFinal;
+        private System.Windows.Forms.DateTimePicker dtpFinal;
+        private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.PictureBox picWait;
+        private System.Windows.Forms.Label lblMensajes;
+        private System.Windows.Forms.SaveFileDialog sfdExcel;
+        private System.Windows.Forms.ComboBox cmbCarteras;
+        private System.Windows.Forms.Label lblServidor;
+    }
+}
